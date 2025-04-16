@@ -5,6 +5,8 @@ import EmailIcon from "@mui/icons-material/Email";
 
 import Conatctimage from "../../public/images/MT5banaer.png";
 
+import { Link } from "react-router-dom"; // Correct import for Link
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
 
@@ -182,18 +184,20 @@ const ContactForm = () => {
               }}
             />
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-              <Button
-                variant="contained"
-                sx={{
-                  bgcolor: "transparent",
-                  border: "1px solid #2c2c2c",
-                  color: "white",
-                  "&:hover": { bgcolor: "#333" },
-                  textTransform: "capitalize",
-                }}
-              >
-                Back to Home
-              </Button>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <Button
+                  variant="contained"
+                  sx={{
+                    bgcolor: "transparent",
+                    border: "1px solid #2c2c2c",
+                    color: "white",
+                    "&:hover": { bgcolor: "#333" },
+                    textTransform: "capitalize",
+                  }}
+                >
+                  Back to Home
+                </Button>
+              </Link>
               <Button
                 type="submit"
                 variant="contained"
