@@ -3,6 +3,8 @@ import { Eye, BarChart2, Clock, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
+import {Link} from 'react-router-dom';
+
 const MT5Transparency = () => {
   // Sample trade data
   const recentTrades = [
@@ -72,9 +74,9 @@ const MT5Transparency = () => {
                 </div>
                 
                 <div className="flex justify-center mt-6">
-                  <Button variant="outline" className="border-yopips-yellow text-yopips-yellow hover:bg-yopips-yellow/10">
+                 <Link to="/TradeHistory"> <Button variant="outline" className="border-yopips-yellow text-yopips-yellow hover:bg-yopips-yellow/10">
                     View All Trades
-                  </Button>
+                  </Button> </Link>
                 </div>
               </CardContent>
             </Card>

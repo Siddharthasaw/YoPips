@@ -17,6 +17,7 @@ import FaqPage from "./pages/FaqPage";
 import TremsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivecyPolicy";
 import CookiesPolicy from "./pages/CookiesPolicy";
+import TradeHistory from "./pages/TradeHistory";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => (
             <Route path="/TremsOfService" element={<TremsOfService />} />
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
             <Route path="/CookiesPolicy" element={<CookiesPolicy/>} />
+            <Route path="/TradeHistory" element={<TradeHistory  />} />
             
           </Routes>
         </MainLayout>

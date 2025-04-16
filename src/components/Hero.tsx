@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
+    <section id="home" className="relative min-h-screen flex items-center " style={{paddingTop: '-100px'}}>
       <div className="absolute inset-0 bg-crypto-gradient opacity-95 z-0"></div>
       
       {/* Animated pattern overlay */}
