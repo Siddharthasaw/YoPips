@@ -6,27 +6,32 @@ const HowItWorks = () => {
     {
       icon: LogIn,
       title: "Sign up in minutes",
-      description: "Create your account with just a few clicks and verify your email to get started."
+      description: "Create your account with just a few clicks and verify your KYC to get started."
     },
     {
       icon: Upload,
       title: "Deposit your capital",
-      description: "Start with as little as $100 and fund your account via credit card or crypto."
+      description: "Start with as little as $500 and fund your account via crypto."
     },
     {
       icon: TrendingUp,
       title: "Our robot trades for you",
-      description: "Our XAUUSD trading algorithm works 24/7 to earn you a fixed 1% daily return."
+      description: "Our XAUUSD trading algorithm works 24/5 to earn you a fixed 1% daily return."
     },
     {
       icon: Wallet,
       title: "Withdraw anytime",
       description: "Access your funds whenever you want with no lock-in periods or penalties."
+    },
+    {
+      icon: Wallet,
+      title: "Flexible Funding",
+      description: "Add funds anytime above $200."
     }
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-[hsl(0deg 0% 14.65%)] text-white" style={{borderTop: "1px solid rgba(100, 100, 99, 0.3)"}}>
+    <section id="how-it-works" className="py-20 bg-[hsl(0deg 0% 14.65%)] text-white" style={{ borderTop: "1px solid rgba(100, 100, 99, 0.3)" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">How It Works</h2>
@@ -40,7 +45,7 @@ const HowItWorks = () => {
             {/* Horizontal Connection Line */}
             <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#FFD700]/30 -translate-y-1/2 z-0"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-10 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-10 relative z-10">
               {steps.map((step, index) => (
                 <motion.div
                   key={index}

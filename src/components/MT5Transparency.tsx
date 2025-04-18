@@ -23,7 +23,7 @@ const MT5Transparency = () => {
             <span className="text-sm">Full Transparency</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Trade with <span className="text-yopips-yellow">Full Transparency</span>
+            Trade with <span className="text-yopips-yellow">Robust Security</span>
           </h2>
           <p className="text-lg text-white/80 max-w-3xl mx-auto">
             Monitor every trade in real-time with our MetaTrader 5 integration. See exactly how we achieve our consistent 1% daily returns.

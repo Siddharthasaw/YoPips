@@ -60,7 +60,7 @@ const ProfitCalculator = () => {
             Calculate Your <span className="text-yopips-yellow">YoPips</span> Returns
           </h2>
           <p className="text-lg text-white/80 max-w-3xl mx-auto">
-            See how much you could earn with our fixed 1% daily return over 20 trading days per month
+            See how much you could earn with our fixed 1% daily return over trading days per month
           </p>
         </div>
         

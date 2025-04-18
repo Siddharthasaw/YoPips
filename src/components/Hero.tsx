@@ -32,7 +32,7 @@ const Hero = () => {
               Earn <span className="text-gradient">1% Daily</span> with YoPips
             </h1>
             <p className="text-xl text-white/80 mb-8 max-w-xl">
-              Maximize your wealth with our MT5-integrated trading platform delivering a fixed 20% monthly return over 20 trading days.
+              Maximize your wealth with our MT5-integrated trading platform delivering a fixed 1%  return over trading days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button 
@@ -65,7 +65,7 @@ const Hero = () => {
             <div className="bg-card/70 backdrop-blur-sm rounded-lg p-6 border border-white/10 shadow-xl max-w-md">
               <div className="text-center mb-4">
                 <h3 className="text-2xl font-bold text-primary mb-2">Automated Trading</h3>
-                <p className="text-white/80 text-lg">24/7 automated trades with MT5 integration</p>
+                <p className="text-white/80 text-lg">24/5 automated trades with MT5 integration</p>
               </div>
               
               <div className="bg-muted rounded-lg p-4 mb-6">
