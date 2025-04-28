@@ -18,6 +18,7 @@ import TremsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivecyPolicy";
 import CookiesPolicy from "./pages/CookiesPolicy";
 import TradeHistory from "./pages/TradeHistory";
+import CommingSoon from "./components/CommingSoon";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
             <Route path="/CookiesPolicy" element={<CookiesPolicy/>} />
             <Route path="/TradeHistory" element={<TradeHistory  />} />
+            <Route path="/CommingSoon" element={<CommingSoon />} />
             
           </Routes>
         </MainLayout>

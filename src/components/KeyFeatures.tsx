@@ -22,7 +22,7 @@ const KeyFeatures = () => {
     {
       icon: <Headset className="h-10 w-10 text-yopips-yellow" />,
       title: "24/7 Support",
-      description: "Get help via WhatsApp or live chat whenever you need it. Our team is always available.",
+      description: "Get help via Telegram or live chat whenever you need it. Our team is always available.",
     }
   ];
 

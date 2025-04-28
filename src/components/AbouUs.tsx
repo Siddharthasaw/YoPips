@@ -42,12 +42,12 @@ const AboutUs = () => {
             fontWeight="bold"
             sx={{ mb: 2, fontSize: { xs: "24px", md: "36px" } }}
           >
-            About Our Transparent Trading System
+            About Our Trading System
           </Typography>
 
           <Typography sx={{ mb: 3, fontSize: "18px", lineHeight: 1.7, color: "rgba(255,255,255,0.8)" }}>
-            Our mission is to empower investors with complete visibility. We don’t just promise returns,
-            we show you how we achieve them. From trade logs to risk metrics, our system gives you full access
+            Our mission is to empower investors with Stable Returns and Steady Growth. We don’t just promise returns,
+            we show you how we achieve them. From trade logs to risk metrics, our system will give you full access
             to our gold trading robot's performance and decision-making.
           </Typography>
 

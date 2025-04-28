@@ -26,7 +26,7 @@ const HeroMT5: React.FC = () => {
       </Typography>
       <Typography variant="h6" sx={{ maxWidth: 600, opacity: 0.8 }}>
         Experience seamless and automated trading with our MT5 platform.
-        Get full transparency and maximize your daily returns.
+        Get Robust security and maximize your daily returns.
       </Typography>
 
       <Box sx={{ mt: 3, display: "flex", gap: 2 }}>

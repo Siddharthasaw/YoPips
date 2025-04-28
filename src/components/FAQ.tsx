@@ -49,7 +49,7 @@ const FAQ = () => {
     {
       question: "Is there a minimum investment amount?",
       answer:
-        "Yes, the minimum investment is $100. This allows us to properly diversify and execute our trading strategy while generating meaningful returns for our investors.",
+        "Yes, the minimum investment is $500. This allows us to properly diversify and execute our trading strategy while generating meaningful returns for our investors.",
     },
   ];
 

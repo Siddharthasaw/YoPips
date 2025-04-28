@@ -10,19 +10,19 @@ const Promotions = () => {
     {
       name: "Michael S.",
       location: "New York, USA",
-      quote: "I've been with YoPips for 6 months now and the 1% daily return has been consistent. Their MT5 transparency gives me complete confidence.",
+      quote: "I've been with YoPips for 6 months now and the 1% daily return has been consistent. weekly profit gives me complete confidence.",
       rating: 5
     },
     {
       name: "Sarah L.",
       location: "London, UK",
-      quote: "Made $200 in my first month with just a $1,000 investment! The customer support via WhatsApp is incredible.",
+      quote: "Made $200 in my first month with just a $1,000 investment! The customer support via Telegram is incredible.",
       rating: 5
     },
     {
       name: "David T.",
       location: "Sydney, Australia",
-      quote: "After trying various trading platforms, YoPips stands out with its transparency and consistent returns. I can see every trade in MT5.",
+      quote: "After trying various trading platforms, YoPips stands out with its transparency and consistent returns.",
       rating: 5
     }
   ];

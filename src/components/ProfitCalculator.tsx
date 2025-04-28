@@ -1,10 +1,11 @@
-
 import { useState, useEffect } from 'react';
 import { Calculator, TrendingUp, Calendar } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Slider } from '@/components/ui/slider';
 import { Button } from '@/components/ui/button';
+
+import {Link} from 'react-router-dom';
 
 const ProfitCalculator = () => {
   const [investment, setInvestment] = useState(1000);
@@ -43,8 +44,8 @@ const ProfitCalculator = () => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
+      minimumFractionDigits: 0, // Remove decimal places
+      maximumFractionDigits: 0 // Remove decimal places
     }).format(value);
   };
 
@@ -159,9 +160,11 @@ const ProfitCalculator = () => {
                       </p>
                     </div>
                     
+                    <Link to={"/signup"}>
                     <Button className="w-full bg-yopips-yellow hover:bg-yopips-yellow/90 text-black font-bold mt-4">
                       Start Trading Now
                     </Button>
+                    </Link>
                   </div>
                 </div>
               </div>

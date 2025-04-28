@@ -1,17 +1,23 @@
-
 import { Eye, BarChart2, Clock, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const MT5Transparency = () => {
   // Sample trade data
   const recentTrades = [
-    { id: '#28752', pair: 'XAUUSD', entry: '1932.45', exit: '1938.72', profit: '+$63.27', isProfit: true, time: '2 mins ago' },
-    { id: '#28751', pair: 'XAUUSD', entry: '1929.18', exit: '1932.45', profit: '+$32.70', isProfit: true, time: '15 mins ago' },
-    { id: '#28750', pair: 'XAUUSD', entry: '1935.60', exit: '1929.18', profit: '-$64.20', isProfit: false, time: '32 mins ago' },
-    { id: '#28749', pair: 'XAUUSD', entry: '1927.33', exit: '1935.60', profit: '+$82.70', isProfit: true, time: '1 hour ago' },
+    { id: '#28752', pair: 'XAUUSD', entry: '$1000', profit: '+$50', isProfit: true, time: '30 mins ago' },
+    { id: '#28751', pair: 'XAUUSD', entry: '$10000', profit: '+$500', isProfit: true, time: '4 hour ago' },
+    { id: '#28750', pair: 'XAUUSD', entry: '$6000', profit: '+$300', isProfit: true, time: '120 mins ago' },
+    { id: '#28749', pair: 'XAUUSD', entry: '$500', profit: '-$25', isProfit: false, time: '1 hour ago' },
+    { id: '#28752', pair: 'XAUUSD', entry: '$4500', profit: '+$225', isProfit: true, time: '13 mins ago' },
+    { id: '#28751', pair: 'XAUUSD', entry: '$700', profit: '-$35', isProfit: false, time: '30 mins ago' },
+    { id: '#28750', pair: 'XAUUSD', entry: '$1800', profit: '+$90', isProfit: true, time: '32 mins ago' },
+    { id: '#28749', pair: 'XAUUSD', entry: '$2700', profit: '+$135', isProfit: true, time: '1 hour ago' },
+    { id: '#28750', pair: 'XAUUSD', entry: '$8500', profit: '+$425', isProfit: true, time: '3 hour ago' },
+    { id: '#28749', pair: 'XAUUSD', entry: '$7200', profit: '+$360', isProfit: true, time: '6 hour ago' },
+    { id: '#28749', pair: 'XAUUSD', entry: '$5600', profit: '+$280', isProfit: true, time: '5 hour ago' },
   ];
 
   return (
@@ -29,7 +35,7 @@ const MT5Transparency = () => {
             Monitor every trade in real-time with our MetaTrader 5 integration. See exactly how we achieve our consistent 1% daily returns.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2">
             <Card className="border-muted bg-card h-full">
@@ -38,7 +44,7 @@ const MT5Transparency = () => {
                   <BarChart2 className="mr-2 h-5 w-5 text-yopips-yellow" />
                   Live Trading Feed
                 </h3>
-                
+
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
@@ -46,7 +52,6 @@ const MT5Transparency = () => {
                         <th className="text-left pb-3 text-white/70 font-medium">Trade ID</th>
                         <th className="text-left pb-3 text-white/70 font-medium">Pair</th>
                         <th className="text-left pb-3 text-white/70 font-medium">Entry</th>
-                        <th className="text-left pb-3 text-white/70 font-medium">Exit</th>
                         <th className="text-left pb-3 text-white/70 font-medium">Profit/Loss</th>
                         <th className="text-left pb-3 text-white/70 font-medium">Time</th>
                       </tr>
@@ -57,8 +62,11 @@ const MT5Transparency = () => {
                           <td className="py-3 text-white/90 font-medium">{trade.id}</td>
                           <td className="py-3 text-white/90">{trade.pair}</td>
                           <td className="py-3 text-white/90">{trade.entry}</td>
-                          <td className="py-3 text-white/90">{trade.exit}</td>
-                          <td className={`py-3 font-medium ${trade.isProfit ? 'text-profit' : 'text-loss'}`}>
+                          <td
+                            className={`py-3 font-medium ${
+                              trade.isProfit ? 'text-green-500' : 'text-red-500'
+                            }`}
+                          >
                             {trade.profit}
                           </td>
                           <td className="py-3 text-white/70">
@@ -72,16 +80,18 @@ const MT5Transparency = () => {
                     </tbody>
                   </table>
                 </div>
-                
+
                 <div className="flex justify-center mt-6">
-                 <Link to="/TradeHistory"> <Button variant="outline" className="border-yopips-yellow text-yopips-yellow hover:bg-yopips-yellow/10">
-                    View All Trades
-                  </Button> </Link>
+                  <Link to="/TradeHistory">
+                    <Button variant="outline" className="border-yopips-yellow text-yopips-yellow hover:bg-yopips-yellow/10">
+                      View All Trades
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
           </div>
-          
+
           <div>
             <Card className="border-muted bg-card h-full">
               <CardContent className="p-6">
@@ -89,7 +99,7 @@ const MT5Transparency = () => {
                   <Lock className="mr-2 h-5 w-5 text-yopips-yellow" />
                   MT5 Access
                 </h3>
-                
+
                 <div className="mb-6">
                   <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-4 overflow-hidden relative">
                     {/* Mini candlestick chart */}
@@ -99,13 +109,13 @@ const MT5Transparency = () => {
                         const isGreen = Math.random() > 0.4;
                         const width = 100 / 40 - 0.5;
                         return (
-                          <div 
-                            key={i} 
+                          <div
+                            key={i}
                             className={`${isGreen ? 'bg-profit' : 'bg-loss'}`}
-                            style={{ 
-                              height: `${height}%`, 
+                            style={{
+                              height: `${height}%`,
                               width: `${width}%`,
-                              maxWidth: '4px'
+                              maxWidth: '4px',
                             }}
                           ></div>
                         );
@@ -115,11 +125,11 @@ const MT5Transparency = () => {
                       Live MT5 Chart Feed
                     </div>
                   </div>
-                  
+
                   <p className="text-white/80 mb-6">
                     Get full access to our MT5 account to monitor all trading activities in real-time. Complete transparency ensures you can verify our 1% daily returns.
                   </p>
-                  
+
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center">
                       <div className="h-2 w-2 rounded-full bg-yopips-yellow mr-2"></div>
@@ -138,10 +148,12 @@ const MT5Transparency = () => {
                       <span className="text-white/80 text-sm">Download trade history</span>
                     </div>
                   </div>
-                  
+
+                  <Link to="/commingsoon">
                   <Button className="w-full bg-yopips-yellow hover:bg-yopips-yellow/90 text-black font-medium">
                     Access MT5 Dashboard
                   </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
