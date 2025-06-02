@@ -27,7 +27,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <span className="font-bold text-2xl uppercase">
-            <img src={Logo} alt="Logo" style={{width:"100px"}} />
+            <Link to='/'><img src={Logo} alt="Logo" style={{width:"100px"}} /></Link> 
           </span>
         </div>
 
